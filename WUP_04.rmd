@@ -22,6 +22,12 @@ The data is in the file GSScsv.csv and came from the 2018 General Social Survey.
 $H_0$ There is no difference between the average score on the WORDSUM test and level of schooling DEGREE  
 $H_a$ There is a significant difference in average score on the WORDSUM test between at least two levels of DEGREE  
 
+```{r}
+gssdata=read_csv("GSScsv.csv")
+```
+
+
+
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
@@ -35,6 +41,18 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+basicCN <- ggplot(gssdata,aes(x=DEGREE,y=WORDSUM))
+```
+## Now add in boxplot
+
+```{r}
+basicCN + geom_boxplot()
+```
+
+  
+The boxplot above shows the difference between WORDSUM and degrees. If we were to move the LT High School over to the right, it would not be in the of the Junior College boxplot. This would also apply to the Graduate boxplot which is different from the High School boxplot and LT High school plot if they were moved next to each other. They would not interfere with each other which means that they appear to be different.  
 
 ### Numerical Descriptive Results
 
