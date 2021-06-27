@@ -58,10 +58,15 @@ The boxplot above shows the difference between WORDSUM and degrees. If we were t
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+favstats(WORDSUM~DEGREE,data=gssdata)
+```
+
+The numerical results show that the highest mean is the graduate degree and the lowest being LT High School degree being 3 points away from it at 7.750000 which makes it the smallest. The Graduate degree had the highest mean at 10.095238 while the closest where junior college at 9.916667 and bachelor at 9.204545 which means that there is a difference between all five degrees mean.
+
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
-
 
 # Discussion and Conclusion
 
